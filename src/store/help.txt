@@ -1,0 +1,33 @@
+# MST (implementation)
+
+1. install mobx & mobx state lite
+2. create a file of store.js & declare 
+
+const UserModel = types
+ .model('User', {
+    firstName: types.string,
+  })
+ .actions(self => ({
+    afterCreate() {
+      console.log("I'm called as useEffect");          // if needed
+    },                                                      
+    setFirstName(value) {
+      self.firstName = value;
+    },
+  }))
+  .views(self=>({
+    get fullName(){
+        return store.firstName + '' + store.lastName
+    }
+  }))
+
+const user = UserModel.create({
+    firstName:'',
+})
+
+export default user;
+
+3. wrap the component where you need to use actions while exporting like this -> export default observer(HomeScreen)
+& import {observer} from "mobx-react-lite";
+   
+# --------------------------------------------------------------------------------
