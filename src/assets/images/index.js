@@ -6,3 +6,6 @@ export const places = require('./places.jpg');
 export const bg = require('./bg.jpeg');
 export const swiggy = require('./swiggy.png');
 export const uber = require('./uber.png');
+export const smile = require('./smile.png');
+export const git = require('./git.png');
+export const heart = require('./heart.png');
