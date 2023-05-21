@@ -17,71 +17,40 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {map, user} from '../assets/images';
 import {getRandomInt} from './Swiggy.screen';
+import {names} from '../utils/IndianNames';
 
-const names = [
-  'Aarav',
-  'Vihaan',
-  'Vivaan',
-  'Ananya',
-  'Diya',
-  'Advik',
-  'Kabir',
-  'Anaya',
-  'Aarav',
-  'Vivaan',
-  'Aditya',
-  'Vivaan',
-  'Vihaan',
-  'Arjun',
-  'Vivaan',
-  'Reyansh',
-  'Mohammed',
-  'Sai',
-  'Arnav',
-  'Aayan',
-  'Krishna',
-  'Ishaan',
-  'Shaurya',
-  'Atharva',
-  'Advik',
-  'Pranav',
-  'Advaith',
-  'Aaryan',
-  'Dhruv',
-  'Kabir',
-  'Ritvik',
-  'Aarush',
-  'Kian',
-  'Darsh',
-  'Veer',
-];
+export const getRandomName = () => {
+  let randomName = `${names[Math.floor(Math.random() * names.length)].name}`;
+  const words = randomName.split(' ');
+  return words
+    .map(word => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(' ');
+};
 
-const surnames = [
-  'Bedi',
-  'Gandhi',
-  'Parekh',
-  'Kohli',
-  'Ahluwalia',
-  'Chandra',
-  'Jha',
-  'Khanna',
-];
-
-const UberScreen = ({navigation}) => {
+const UberScreen = ({navigation, route}) => {
   //varies
   const driver =
-    `${names[Math.floor(Math.random() * names.length)]} ${surnames[Math.floor(Math.random() * surnames.length)]}`
-    
+    route?.params?.driver === 'random'
+      ? getRandomName()
+      : route?.params?.driver;
+
   const details = {
-    date: 'May 12',
-    time: '8:57',
+    date: route?.params?.date,
+    time: route?.params?.time,
   };
 
   //fixed
-  const office = `22, Star Mall, NH8, Block A, Sector 30,\nGurugram, Haryana 122001, India`;
-  const home = `554, Jal Vihar Colony, Sector 46,\nGurugramm, Haryana 122001, India`;
-  const AM_PM = 'PM';
-  const fare = getRandomInt(85, 99);
+  const office = route?.params?.office.length
+    ? route?.params?.office
+    : `22, Star Mall, NH8, Block A, Sector 30,\nGurugram, Haryana 122001, India`;
+  const home = route?.params?.home.length
+    ? route?.params?.home
+    : `554, Jal Vihar Colony, Sector 46,\nGurugramm, Haryana 122001, India`;
+  const fare = route?.params?.fare.length
+    ? Number(route?.params?.fare)
+    : getRandomInt(85, 99);
 
   const Header = () => {
     return (
@@ -124,7 +93,7 @@ const UberScreen = ({navigation}) => {
               {`Uber Auto trip with\n${driver}`}
             </AppText>
             <AppText fontSize={15} fontWeight={400}>
-              {`${details.date} ${details.time}${AM_PM}`}
+              {`${details.date} ${details.time}`}
             </AppText>
             <AppText mt={0.5} fontSize={15} fontWeight={400}>
               {`₹${fare}.00`}

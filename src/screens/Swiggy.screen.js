@@ -7,16 +7,13 @@ import {
   HStack,
   Icon,
   Image,
-  ScrollView,
   Spacer,
   VStack,
 } from 'native-base';
 import AppText from '../components/AppText';
-import IonIcons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import Octicons from 'react-native-vector-icons/Octicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {map, places, user, veg} from '../assets/images';
+import {places, veg} from '../assets/images';
 import {Dimensions} from 'react-native';
 
 export function getRandomInt(min, max) {
@@ -39,35 +36,20 @@ function random(numbers) {
 
 const ScreenWidth = Dimensions.get('window').width;
 
-const SwiggyScreen = ({navigation}) => {
+const SwiggyScreen = ({navigation, route}) => {
   //varies
-  const outlet = {
-    name: "Chef Mantra",
-    location: 'Sector 45',
-  };
-  const deliveryDetails = {
-    date: '10 May',
-    time: '10:09',
-    deliveryman: 'Shaliesh Yadav',
-  };
-  const items = [
-    {
-      name: 'Veg Thali',
-      pc: 1,
-      price: 239,
-    },
-    // {
-    //   name: 'Bhel Puri',
-    //   pc: 1,
-    //   price: 128,
-    // },
-  ];
+  const outlet = route?.params?.outlet;
+  const deliveryDetails = route?.params?.deliveryDetails;
+  const items = [...route?.params?.items];
 
   //fixed
   const orderId = getRandomInt(150000000000, 159000000000);
-  const myLocationName = 'Pg';
-  const myLocationAddress = `554, Jal vihar, Switch residency, sector 46, Guru..`;
-  const AM_PM = 'PM';
+  const myLocationName = route?.params?.myLocationName.length
+    ? route?.params?.myLocationName
+    : 'Pg';
+  const myLocationAddress = route?.params?.myLocationAddress.length
+    ? route?.params?.myLocationAddress
+    : `554, Jal vihar, Switch residency, sector 46, Guru..`;
   const taxes = getRandomInt(3, 14);
   const paidVia = 'Mobikwik';
   const itemTotal = items.map(amount).reduce(sum);
@@ -186,7 +168,7 @@ const SwiggyScreen = ({navigation}) => {
       <HStack mb={5} mt={2} px={'4'} w={'full'}>
         <Icon as={MaterialIcons} name="check" size={'6'} color={'#3C8C30'} />
         <AppText fontWeight={400} fontSize={13} mx={4} ml={3} mr={8}>
-          {`Order delivered on ${deliveryDetails.date}, 2023, ${deliveryDetails.time} ${AM_PM} by ${deliveryDetails.deliveryman}`}
+          {`Order delivered on ${deliveryDetails.date}, 2023, ${deliveryDetails.time} by ${deliveryDetails.deliveryman}`}
         </AppText>
       </HStack>
 
