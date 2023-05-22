@@ -1,18 +1,21 @@
 import 'react-native-gesture-handler'; //remember to always import this
-import React from 'react';
-import {Box, NativeBaseProvider, Text} from 'native-base';
+import React, {useEffect} from 'react';
+import {NativeBaseProvider} from 'native-base';
 import Toast from 'react-native-toast-message';
 import InternetConnectionAlert from 'react-native-internet-connection-alert';
 import {dismiss} from './src/assets/images';
 import Loader from './src/components/Loader';
 import store from './src/store';
 import {observer} from 'mobx-react-lite';
-import HomeScreen from './src/screens/Home.screen';
 import RootNavigation from './src/navigation/RootNavigation';
+import SplashScreen from 'react-native-splash-screen';
 
 // Don't forget to add your App name in './src/utils/config.js'
 
 const App = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <InternetConnectionAlert
       errorImageSrc=""

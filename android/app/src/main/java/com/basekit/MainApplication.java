@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.mkuczera.RNReactNativeHapticFeedbackPackage;
 import com.mkuczera.RNReactNativeHapticFeedbackPackage;
 import com.imagepicker.ImagePickerPackage;
@@ -34,6 +35,12 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
           return packages;
         }
+
+           @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen.show(this);  // here
+        super.onCreate(savedInstanceState);
+    }
 
         @Override
         protected String getJSMainModuleName() {
