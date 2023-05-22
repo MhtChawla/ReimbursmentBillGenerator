@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseKit.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>2E42F4C99452DD02F65765A4191DA2B7693FE996</string>
+				<key>dateExpires</key>
+				<string>18/05/24</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>45G97QS8TD.com.BaseKit1</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>45G97QS8TD</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>BaseKit.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>d7e948cb-59d8-449d-b5c7-ea4912e0e83c</string>
+				<key>dateExpires</key>
+				<string>21/05/24</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>45G97QS8TD</string>
+				<key>name</key>
+				<string>Antino Labs Private Limited</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

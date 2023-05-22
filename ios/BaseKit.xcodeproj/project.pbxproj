@@ -12,6 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		25CDA4582A1AEB7F0024B80C /* libRNReactNativeHapticFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CDA4572A1AEB7F0024B80C /* libRNReactNativeHapticFeedback.a */; };
 		25E5E7D1290FD92A00EFFF69 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25E5E7C1290FD92900EFFF69 /* Foundation.ttf */; };
 		25E5E7D3290FD92A00EFFF69 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25E5E7C3290FD92900EFFF69 /* Entypo.ttf */; };
 		25E5E7D4290FD92A00EFFF69 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25E5E7C4290FD92900EFFF69 /* SimpleLineIcons.ttf */; };
@@ -50,6 +51,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BaseKit/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BaseKit/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-BaseKit-BaseKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseKit-BaseKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25CDA4522A1AE53D0024B80C /* RNReactNativeHapticFeedback.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNReactNativeHapticFeedback.xcodeproj; path = "../node_modules/react-native-haptic-feedback/ios/RNReactNativeHapticFeedback.xcodeproj"; sourceTree = "<group>"; };
+		25CDA4572A1AEB7F0024B80C /* libRNReactNativeHapticFeedback.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNReactNativeHapticFeedback.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E5E7C1290FD92900EFFF69 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		25E5E7C3290FD92900EFFF69 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		25E5E7C4290FD92900EFFF69 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25CDA4582A1AEB7F0024B80C /* libRNReactNativeHapticFeedback.a in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-BaseKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +127,13 @@
 			name = BaseKit;
 			sourceTree = "<group>";
 		};
+		25CDA4532A1AE53D0024B80C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		25E5E7C0290FD88B00EFFF69 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +157,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25CDA4572A1AEB7F0024B80C /* libRNReactNativeHapticFeedback.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-BaseKit.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-BaseKit-BaseKitTests.a */,
@@ -156,6 +168,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				25CDA4522A1AE53D0024B80C /* RNReactNativeHapticFeedback.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -269,6 +282,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 25CDA4532A1AE53D0024B80C /* Products */;
+					ProjectRef = 25CDA4522A1AE53D0024B80C /* RNReactNativeHapticFeedback.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* BaseKit */,
@@ -544,7 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 344QTFUFPA;
+				DEVELOPMENT_TEAM = 45G97QS8TD;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BaseKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,7 +575,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaseKit1;
 				PRODUCT_NAME = BaseKit;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -571,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 344QTFUFPA;
+				DEVELOPMENT_TEAM = 45G97QS8TD;
 				INFOPLIST_FILE = BaseKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,7 +601,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BaseKit1;
 				PRODUCT_NAME = BaseKit;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

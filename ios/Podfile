@@ -25,6 +25,8 @@ target 'BaseKit' do
 
   pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
 
+  pod 'RNReactNativeHapticFeedback', :path => '../node_modules/react-native-haptic-feedback'
+
   target 'BaseKitTests' do
     inherit! :complete
     # Pods for testing

@@ -420,6 +420,8 @@ PODS:
     - React-Core
   - RNPermissions (3.6.1):
     - React-Core
+  - RNReactNativeHapticFeedback (2.0.3):
+    - React-Core
   - RNReanimated (2.11.0):
     - DoubleConversion
     - FBLazyVector
@@ -547,6 +549,7 @@ DEPENDENCIES:
   - RNFastImage (from `../node_modules/react-native-fast-image`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
+  - RNReactNativeHapticFeedback (from `../node_modules/react-native-haptic-feedback`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
@@ -692,6 +695,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-gesture-handler"
   RNPermissions:
     :path: "../node_modules/react-native-permissions"
+  RNReactNativeHapticFeedback:
+    :path: "../node_modules/react-native-haptic-feedback"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
@@ -775,6 +780,7 @@ SPEC CHECKSUMS:
   RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
   RNGestureHandler: b7a872907ee289ada902127f2554fa1d2c076122
   RNPermissions: dcdb7b99796bbeda6975a6e79ad519c41b251b1c
+  RNReactNativeHapticFeedback: afa5bf2794aecbb2dba2525329253da0d66656df
   RNReanimated: 6c5f01604cbdb689c37e94195aa3b4763b075b2e
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
@@ -784,6 +790,6 @@ SPEC CHECKSUMS:
   Yoga: 6671cf077f614314c22fd09ddf87d7abeee64e96
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 6c7035e255f5fb326c19a345733e61a22db66113
+PODFILE CHECKSUM: 2ce5021f33b70854ba296554593ed6a2436bbe0b
 
 COCOAPODS: 1.11.3

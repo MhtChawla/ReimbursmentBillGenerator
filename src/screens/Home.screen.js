@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {
   Box,
   Center,
@@ -13,9 +13,19 @@ import {smile} from '../assets/images';
 import AppText from '../components/AppText';
 import {Dimensions} from 'react-native';
 import AuthorCredits from '../utils/AuthorCredits';
+import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 
 const HomeScreen = ({navigation}) => {
   const ScreenWidth = Dimensions.get('window').width;
+
+  const options = {
+    enableVibrateFallback: true,
+    ignoreAndroidSystemSettings: false,
+  };
+
+  const vibrateBitch = useCallback(() => {
+    ReactNativeHapticFeedback.trigger('impactLight');
+  }, []);
 
   const Tab = ({name, onPress, ...other}) => {
     const size = ScreenWidth * 0.4;
@@ -77,9 +87,18 @@ const HomeScreen = ({navigation}) => {
           px={'4'}
           justifyContent={'space-evenly'}
           alignItems={'center'}>
-          <Tab onPress={() => navigation.navigate('UberForm')} name="UBER" />
           <Tab
-            onPress={() => navigation.navigate('SwiggyForm')}
+            onPress={() => {
+              ReactNativeHapticFeedback.trigger('impactLight', options);
+              navigation.navigate('UberForm');
+            }}
+            name="UBER"
+          />
+          <Tab
+            onPress={() => {
+              ReactNativeHapticFeedback.trigger('impactLight', options);
+              navigation.navigate('SwiggyForm');
+            }}
             name="SWIGGY"
           />
         </HStack>
