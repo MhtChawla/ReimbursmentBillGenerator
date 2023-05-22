@@ -9,7 +9,7 @@ import {
   VStack,
 } from 'native-base';
 import {observer} from 'mobx-react-lite';
-import {bg, smile} from '../assets/images';
+import {smile} from '../assets/images';
 import AppText from '../components/AppText';
 import {Dimensions} from 'react-native';
 import AuthorCredits from '../utils/AuthorCredits';
