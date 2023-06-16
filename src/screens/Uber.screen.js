@@ -44,10 +44,10 @@ const UberScreen = ({navigation, route}) => {
   //fixed
   const office = route?.params?.office.length
     ? route?.params?.office
-    : `22, Star Mall, NH8, Block A, Sector 30, Gurugram, Haryana 122001, India`;
+    : `202, 2nd floor, Tata Itech Park, Sector 30, Gurugram, Haryana 122001, India`;
   const home = route?.params?.home.length
     ? route?.params?.home
-    : `554, Jal Vihar Colony, Sector 46, Gurugram, Haryana 122001, India`;
+    : `777, 1st floor, sector 38, Gurugram, Haryana 122003, India`;
   const fare = route?.params?.fare.length
     ? Number(route?.params?.fare)
     : getRandomInt(85, 99);
