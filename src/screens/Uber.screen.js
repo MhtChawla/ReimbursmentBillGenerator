@@ -44,10 +44,10 @@ const UberScreen = ({navigation, route}) => {
   //fixed
   const office = route?.params?.office.length
     ? route?.params?.office
-    : `22, Star Mall, NH8, Block A, Sector 30,\nGurugram, Haryana 122001, India`;
+    : `22, Star Mall, NH8, Block A, Sector 30, Gurugram, Haryana 122001, India`;
   const home = route?.params?.home.length
     ? route?.params?.home
-    : `554, Jal Vihar Colony, Sector 46,\nGurugramm, Haryana 122001, India`;
+    : `554, Jal Vihar Colony, Sector 46, Gurugram, Haryana 122001, India`;
   const fare = route?.params?.fare.length
     ? Number(route?.params?.fare)
     : getRandomInt(85, 99);
@@ -136,7 +136,7 @@ const UberScreen = ({navigation, route}) => {
             color={'black'}
           />
 
-          <AppText fontSize={15} fontWeight={400}>
+          <AppText fontSize={15} pr={8} fontWeight={400}>
             {office}
           </AppText>
         </HStack>
@@ -151,7 +151,7 @@ const UberScreen = ({navigation, route}) => {
             color={'black'}
           />
 
-          <AppText fontSize={15} fontWeight={400}>
+          <AppText pr={8} fontSize={15} fontWeight={400}>
             {home}
           </AppText>
         </HStack>

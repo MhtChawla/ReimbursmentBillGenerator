@@ -49,7 +49,10 @@ const SwiggyScreen = ({navigation, route}) => {
     : 'Pg';
   const myLocationAddress = route?.params?.myLocationAddress.length
     ? route?.params?.myLocationAddress
-    : `554, Jal vihar, Switch residency, sector 46, Guru..`;
+    : `554, Jal vihar, Switch residency, sector 46, Gurug`;
+
+    const appendDots=myLocationAddress?.length>49?'..':''
+
   const taxes = getRandomInt(3, 14);
   const paidVia = 'Mobikwik';
   const itemTotal = items.map(amount).reduce(sum);
@@ -109,7 +112,7 @@ const SwiggyScreen = ({navigation, route}) => {
       }}>
       <Header />
 
-      <Box>
+      <Box w={'full'}>
         <HStack
           ml={10}
           mt={5}
@@ -143,11 +146,12 @@ const SwiggyScreen = ({navigation, route}) => {
               {myLocationName}
             </AppText>
             <AppText
+              pr={6}
               color={'gray.600'}
               fontSize={13}
               mt={-0.5}
               fontWeight={400}>
-              {myLocationAddress}
+              {myLocationAddress.toString().slice(0,49)+appendDots}
             </AppText>
           </VStack>
         </HStack>
