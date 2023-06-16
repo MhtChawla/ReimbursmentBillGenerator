@@ -2,4 +2,20 @@
 
 Designed & developed with https://github.com/mhtchawlaAntino/RN-Basekit </br>
 
-</br> Generate fake reimbursment bills (uber & swiggy) within 5 seconds !!
+### ImburseMe: Reimbursement bill generator for employees working overtime
+
+(just for fun, not meant to be used as hack at work)
+
+Apps included: <br>
+- Uber <br>
+- Swiggy
+
+<br>
+
+<div>
+   <div>
+    <img src="https://github.com/MhtChawla/glimpse-of-mywork/blob/main/ImburseMe/1.PNG" width="250" />
+    <img src="https://github.com/MhtChawla/glimpse-of-mywork/blob/main/ImburseMe/2.PNG" width="250" />
+    <img src="https://github.com/MhtChawla/glimpse-of-mywork/blob/main/ImburseMe/3.PNG" width="250" />
+  </div>
+</div>
