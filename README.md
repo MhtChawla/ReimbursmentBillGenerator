@@ -1,10 +1,11 @@
 # Intro 
 
-Designed & developed with https://github.com/mhtchawlaAntino/RN-Basekit </br>
+Designed & developed with https://github.com/MhtChawla/RN-Basekit </br>
 
 ### ImburseMe: Reimbursement bill generator for employees working overtime
 
 (just for fun, not meant to be used as hack at work)
+Stack: React Native
 
 Apps included: <br>
 - Uber <br>
