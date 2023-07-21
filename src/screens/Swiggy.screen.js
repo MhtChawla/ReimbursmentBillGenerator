@@ -49,9 +49,9 @@ const SwiggyScreen = ({navigation, route}) => {
     : 'Pg';
   const myLocationAddress = route?.params?.myLocationAddress.length
     ? route?.params?.myLocationAddress
-    : `777, 1st floor, sector 38, Gurugram, Haryana 122003, India`;
+    : `554, Jal vihar, Switch residency, sector 46, Gurug`;
 
-    const appendDots=myLocationAddress?.length>48?'..':''
+  const appendDots = myLocationAddress?.length > 49 ? '..' : '';
 
   const taxes = getRandomInt(3, 14);
   const paidVia = 'Mobikwik';
@@ -151,7 +151,7 @@ const SwiggyScreen = ({navigation, route}) => {
               fontSize={13}
               mt={-0.5}
               fontWeight={400}>
-              {myLocationAddress.toString().slice(0,48)+appendDots}
+              {myLocationAddress.toString().slice(0, 49) + appendDots}
             </AppText>
           </VStack>
         </HStack>
